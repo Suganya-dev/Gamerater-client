@@ -9,4 +9,17 @@ export const ApplicationViews = () => {
         <main style={{
             margin: "5rem 2rem",
             backgroundColor: "lightgoldenrodyellow"
-        }}></main>
+        }}>
+
+            <GameProvider>
+                <Route exact path="/">
+                    <GameList />
+                </Route>
+
+                <Route exact path="/games/new">
+                    <GameForm />
+                </Route>
+            </GameProvider>
+        </main>
+        </>
+}
